@@ -6,7 +6,7 @@ import { Suspense } from "react"
 const getProducts = cache(() => {
   return db.product.findMany({
     where: { isAvailableForPurchase: true },
-    orderBy: { name: "asc" },
+    orderBy: { name: "asc",priceInCents:"desc" },
   })
 }, ["/products", "getProducts"])
 

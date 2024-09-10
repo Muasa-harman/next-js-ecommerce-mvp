@@ -96,6 +96,8 @@ function Form({
       return
     }
 
+    // check for existing order
+
     stripe
       .confirmPayment({
         elements,
